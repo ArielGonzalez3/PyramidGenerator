@@ -26,9 +26,19 @@ const character = "#";
 const count = 8;
 const rows = [];
 
-for (let i = 0; i < count; i = i + 1) {
-  rows.push(character);
-  character.repeat(i + 1);
+// TODO: a different kind of loop
+/*for (let i = 1; i <= count; i ++) {
+  rows.push(padRow(i, count));
+}*/
+
+let continueLoop = false;
+let done = 0;
+
+while(continueLoop) {
+  done++;
+  if(done == count) {
+
+  }
 }
 
 let result = "";
@@ -39,10 +49,7 @@ for (const row of rows) {
   result = result + "\n" + row;
 }
 
-function padRow(name){
-  return name;
+
+function padRow(rowNumber, rowCount){
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
 }
-
-const call = padRow("Ari");
-
-console.log(call);
