@@ -22,14 +22,20 @@
 // console.log(popped);
 // console.log(rows);
 
-const character = "#";
+const character = "Ari";
 const count = 8;
 const rows = [];
 
+let inverted = true;
+
 // TODO: a different kind of loop
-/*for (let i = 1; i <= count; i ++) {
-  rows.push(padRow(i, count));
-}*/
+for (let i = 1; i <= count; i ++) {
+  if (inverted) {
+    rows.unshift(padRow(i, count));
+  } else {
+    rows.push(padRow(i, count));
+  }
+}
 
 
 
@@ -44,9 +50,12 @@ const rows = [];
   rows.push(padRow(i, count));
 }*/
 
-const numbers = [1, 2, 3];
+/*const numbers = [1, 2, 3];
+const shifted = numbers.shift();
 const unshifted = numbers.unshift(5)
+console.log(shifted);
 console.log(unshifted);
+console.log(numbers);*/
 
 let result = "";
 
